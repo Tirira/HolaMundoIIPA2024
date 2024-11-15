@@ -42,14 +42,33 @@ public class Persona {
     }
     
     //4. metodo de regla de negocio
-    public String determinarHoroscopo(){
-        if(signo=="Aries"){
-        return "Hoy sera un mal dia";
-        }
-        if(signo=="Leo"){
+    public String determinarHoroscopo() {
+    if (signo.compareTo("Aries") == 0) {
+        return "Hoy será un mal día";
+    } else if (signo.compareToIgnoreCase("Tauro") == 0) { 
         return "Te vas a caer";
-        }
-        return " No existe coincidencia" ;
-           
+    } else if (signo.isEmpty()) { 
+        return "Encontrarás un dólar";
+    } else if (signo.equals("Cáncer")) { 
+        return "Tu madre te regañará";
+    } else if (signo.compareTo("Leo") == 0) {
+        return "Sacarás 1 en la prueba";
+    } else if (signo.equalsIgnoreCase("Virgo")) {
+        return "Tendrás un accidente";
+    } else if (signo.compareToIgnoreCase("Libra") == 0) {
+        return "Te quemarás con fuego";
+    } else if (signo.equals("Escorpio")) {
+        return "Ganarás la lotería";
+    } else if (signo.compareTo("Sagitario") == 0) {
+        return "Comprarás tu primer carro";
+    } else if (signo.compareToIgnoreCase("Capricornio") == 0) {
+        return "Se te caerá el celular";
+    } else if (signo.equals("Acuario")) {
+        return "Te van a robar";
+    } else if (signo.equalsIgnoreCase("Piscis")) {
+        return "Tu novia te engañará";
     }
+
+    return "No existe coincidencia";
+}
 }

@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package vista;
-
+import java.util.Scanner;
 import modelo.Persona;
 
 /**
@@ -35,9 +35,12 @@ public class Main {
     //  declarar /instanciar  un objeto
     // nombre obbjeto(variable)=new Nombre  de a  clase();
      Persona a= new Persona();
-    a.setSigno("Escorpio");
     ///todos los metodos de retorno se deben imprimir para
     //poder visualizar el valor del conteenido o almacenado en memoria ram
-        System.out.println(a.determinarHoroscopo());
-    
-    }}
+    Scanner es = new Scanner(System.in);
+    Persona b=new Persona();
+        System.out.println("Ingrese  su signoo del Zoodiaco:");
+        b.setSigno(es.nextLine());        
+        System.out.println(b.determinarHoroscopo());
+    }
+}
